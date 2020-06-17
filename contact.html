@@ -10,7 +10,6 @@
         
         body {
             background-color: #add8e6;
-            background-image: url(https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
             background-repeat: no-repeat;
             height: 100%;
             background-size: cover;
@@ -91,6 +90,21 @@
         #icon {
             margin-top: 10px;
         }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            justify-content: center;
+            padding: 5px;
+            background-color: #45a1ff;
+            color: #fff;
+            width: 100%;
+        }
+        
+        #foot {
+            text-align: center;
+            font-family: 'MuseoModerno', cursive;
+        }
     </style>
 </head>
 <script>
@@ -129,10 +143,11 @@
             <input type="text" class="text" placeholder="Contact Number" name="Contact" size="25" pattern="[0-9]{10}"><br>
             <input type="submit" value="Submit" class="button">
         </form>
-        <footer>
-            dfsk
-        </footer>
+
     </div>
+    <footer>
+        <p id="foot"> Some copyright info or perhaps some author info for an &lt;article&gt;?</p>
+    </footer>
 </body>
 
 </html>
