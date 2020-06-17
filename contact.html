@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/0cb865114f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        body {
+            background-color: #add8e6;
+            background-image: url(https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+        }
+        
+        #head {
+            background-color: blue;
+            text-align: center;
+            padding: 25px;
+        }
+        
+        .span {
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+        
+        .href {
+            color: white;
+            cursor: pointer;
+        }
+        
+        .p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        #form-content {
+            background-color: white;
+            padding: 25px;
+            width: 20%;
+            height: 35%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2%;
+            margin-top: 25px;
+        }
+        
+        #form {
+            padding: 15%;
+            width: 25px;
+        }
+        
+        .text {
+            border-left: 0px;
+            border-right: 0px;
+            border-top: 0px;
+            border-bottom: 2px solid lightslategray;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+            margin-left: 18px;
+            font-size: medium;
+        }
+        
+        .button {
+            margin-top: 15px;
+            margin-left: 75%;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #0c87c3;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #add8e6;
+        }
+        
+        .button:active {
+            background-color: #051825;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        
+        #icon {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<script>
+    function validateform() {
+        var name = document.myform.Name.value;
+        var email = document.myform.Email.value;
+        var cn = document.myform.Contact.value;
+        if ((name == "") && (email == "") && (cn ==
+                "")) {
+            alert("Can't be blank");
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+
+<body>
+    <div id="head">
+        <span class="span"><a href="Main.html" class="href"> TRIPS</a></span>
+        <span class="span"><a href="" class="href">ABOUT</a></span>
+        <span class="span"><a href="" class="href">CONTACT</a></span>
+    </div>
+    <div>
+        <h4 class="p">Wanna come on my next trip? contact Me</h4>
+    </div>
+    <div id="form-content">
+        <form id="form" onsubmit="return validateform()" name="myform" method="GET" action="Main.html">
+            <div>
+                <input type="text" class="text" placeholder="Full Name" name="Name" size="25"><br>
+            </div>
+            <div class="mail">
+
+                <input type="email" class="text" placeholder="Email" name="Email" size="25"><br>
+            </div>
+            <input type="text" class="text" placeholder="Contact Number" name="Contact" size="25" pattern="[0-9]{10}"><br>
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+</body>
+
+</html>
